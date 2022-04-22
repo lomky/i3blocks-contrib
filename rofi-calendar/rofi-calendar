@@ -134,6 +134,11 @@ case "$BLOCK_BUTTON" in
 esac
 
 # print blocklet text
-echo $LABEL$(date "$DATEFTM")
-echo $LABEL$(date "$SHORTFMT")
+if [[ $LABEL != " " ]]; then
+  echo $LABEL$(date "$DATEFTM")
+  echo $LABEL$(date "$SHORTFMT")
+else
+  echo $(date "$DATEFTM")
+  echo $(date "$SHORTFMT")
+fi
 ###### Main body ######

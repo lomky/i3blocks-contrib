@@ -32,15 +32,7 @@ markup=none
 [rofi-wttr]
 interval=300
 BAR_POSITION=top
-#FONT=Victor Mono 10
-#LABEL=🌡️
-#LOCATION="Washington_DC"
-
-
-
-[calc-button]
-full_text=🔢
-command=gnome-calculator >/dev/null
+FONT=Victor Mono 10
 
 # Date Time
 #
@@ -52,6 +44,7 @@ DATEFMT=+%a %b-%d %l:%M
 BAR_POSITION=top
 #LABEL=
 FONT=Victor Mono 10
+separator=false
 
 [time]
 color=#FFFF00
@@ -64,22 +57,16 @@ interval=5
 # The second parameter overrides the mixer selection
 # See the script for details.
 
-[volume]
-label=♪
-interval=1
-signal=10
-#STEP=5%
-
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
+label=MEM 
 separator=false
 interval=30
 
 [memory]
-label=SWAP
+label=SWAP 
 instance=swap
 separator=false
 interval=30
@@ -90,7 +77,7 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=HOME
+label=HOME 
 #DIR=/mnt/data
 interval=30
 
@@ -99,28 +86,27 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-color=#00FF00
+color=#00BB00
 interval=10
-separator=false
 
-[wifi]
+#[wifi]
 #INTERFACE=wlp3s0
-label=wifi:
-interval=10
-separator=false
+#label=wifi:
+#interval=10
+#separator=false
 
-[bandwidth]
+#[bandwidth]
 #INTERFACE=eth0
-interval=5
+#interval=5
 
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU
+label=CPU 
 interval=10
-min_width=CPU 100.00%
+min_width=CPU 99.99%
 #separator=false
 
 [load_average]
@@ -134,6 +120,17 @@ interval=10
 label=BAT
 #label=⚡
 interval=30
+
+[volume]
+label=♪
+interval=1
+signal=10
+#STEP=5%
+
+[calc-button]
+full_text=🔢
+command=gnome-calculator >/dev/null
+
 #
 # Generic media player support
 #
